@@ -1,0 +1,48 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: reserva-salas
+    container_name: reserva-salas
+    ports:
+      - 8080:8080
+    volumes:
+      - ./dados:/app/dados
+    networks:
+      - monitoring  # Adicionado à rede compartilhada
+      
+  prometheus:
+    image: prom/prometheus
+    restart: always
+    volumes:
+      - ./prometheus:/etc/prometheus/
+      - ./prometheus/data:/prometheus
+    ports:
+      - 9090:9090
+    networks:
+      - monitoring  # Adicionado à rede compartilhada
+      
+  grafana:
+    image: grafana/grafana
+    restart: always
+    environment:
+      GF_INSTALL_PLUGINS: 'grafana-clock-panel,grafana-simple-json-datasource'
+      GF_SECURITY_ADMIN_USER: 'admin'
+      GF_SECURITY_ADMIN_PASSWORD: 'admin'
+      GF_USERS_ALLOW_SIGN_UP: 'false'
+    volumes:
+      - ./grafana/data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    ports:
+      - 3001:3000
+    depends_on:
+      - prometheus
+    networks:
+      - monitoring  # Adicionado à rede compartilhada
+
+# Adicionar rede compartilhada
+networks:
+  monitoring:
+    driver: bridge

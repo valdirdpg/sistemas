@@ -1,0 +1,11 @@
+version: '3'
+services:
+ web:
+  build:
+    context: .
+    dockerfile: Dockerfile
+  image: reserva-salas
+  container_name: reserva-salas
+  ports:
+    - 8080:8080
+    
