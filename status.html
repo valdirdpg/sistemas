@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Status das Salas</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .menu li {
+      margin-bottom: 10px;
+    }
+
+    .menu li a {
+      display: block;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .menu li a:hover {
+      background-color: #45a049;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f9f9f9;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Status das Salas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Sala</th>
+          <th>Dia</th>
+          <th>Horário</th>
+          <th>Usuário</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{range $room := .}}
+            {{range $reserva := $room.Reservas}}
+                <tr>
+                    <td>{{$room.Name}}</td>
+                    <td>{{$reserva.Dia}}</td>
+                    <td>{{$reserva.Hora}}</td>
+                    <td>{{$reserva.User}}</td>
+                </tr>
+            {{end}}
+        {{end}}
+      </tbody>
+    </table>
+    <ul class="menu">
+      <li><a href="/menu">Voltar para o menu</a></li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,350 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.39.1|537c77323f2e9a3d6771aa0ea73a047017774d16|2022-11-13_04:56:24AM",
+  "containerized": true,
+  "host_distro": {
+    "name": "unknown",
+    "version": "",
+    "display_name": "unknown"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "reserva-salas",
+  "system": {
+    "type": "",
+    "release": "",
+    "distro": {
+      "name": "",
+      "version": "",
+      "display_name": ""
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:f6b797815fdabc42b516ab819ae7416fd8e04e7569eed1ce19fcf7590ed403e3",
+      "tags": [
+        "latest"
+      ],
+      "names": [
+        "reserva-salas:latest"
+      ]
+    },
+    "size": 911128278,
+    "size_human": "911 MB",
+    "create_time": "2025-03-31T18:03:42Z",
+    "docker_version": "20.10.24+dfsg1",
+    "architecture": "amd64",
+    "os": "linux",
+    "env_vars": [
+      "PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "GOLANG_VERSION=1.22.12",
+      "GOTOOLCHAIN=local",
+      "GOPATH=/go"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 12780571,
+  "minified_image_size_human": "13 MB",
+  "minified_image": "reserva-salas.slim",
+  "minified_image_has_data": true,
+  "minified_by": 71.29010730428242,
+  "artifact_location": "/bin/.docker-slim-state/images/f6b797815fdabc42b516ab819ae7416fd8e04e7569eed1ce19fcf7590ed403e3/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "reserva-salas-seccomp.json",
+  "apparmor_profile_name": "reserva-salas-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": false,
+      "id": "sha256:2fce09cfad57c6de112654eeb6f6da1851f3ced1cff7ac0002378642c2c7ca84",
+      "full_name": "golang:1.22",
+      "repo_name": "golang",
+      "version_tag": "1.22",
+      "raw_tags": [
+        "golang:1.22"
+      ],
+      "create_time": "2025-02-04T18:23:13Z",
+      "new_size": 822983029,
+      "new_size_human": "823 MB",
+      "instructions": [
+        {
+          "type": "RUN",
+          "time": "2023-05-10T23:29:59Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 116513634,
+          "size_human": "116 MB",
+          "command_snippet": "RUN []",
+          "command_all": "RUN []",
+          "system_commands": [
+            "[]"
+          ],
+          "comment": "debuerreotype 0.15"
+        },
+        {
+          "type": "RUN",
+          "time": "2023-05-10T23:29:59Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 48455490,
+          "size_human": "48 MB",
+          "command_snippet": "RUN [\"RUN\",\"/bin/sh\",\"-c\",\"set\",\"-eux;\",\"apt...",
+          "command_all": "RUN [\"RUN\",\"/bin/sh\",\"-c\",\"set\",\"-eux;\",\"apt-get\",\"update;\",\"apt-get\",\"install\",\"-y\",\"--no-install-recommends\",\"ca-certificates\",\"curl\",\"gnupg\",\"netbase\",\"sq\",\"wget\",\";\",\"rm\",\"-rf\",\"/var/lib/apt/lists/*\"]",
+          "system_commands": [
+            "[\"RUN\",\"/bin/sh\",\"-c\",\"set\",\"-eux",
+            "\",\"apt-get\",\"update",
+            "\",\"apt-get\",\"install\",\"-y\",\"--no-install-recommends\",\"ca-certificates\",\"curl\",\"gnupg\",\"netbase\",\"sq\",\"wget\",\"",
+            "\",\"rm\",\"-rf\",\"/var/lib/apt/lists/*\"]"
+          ],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2024-01-09T01:14:25Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 177144088,
+          "size_human": "177 MB",
+          "command_snippet": "RUN [\"RUN\",\"/bin/sh\",\"-c\",\"set\",\"-eux;\",\"apt...",
+          "command_all": "RUN [\"RUN\",\"/bin/sh\",\"-c\",\"set\",\"-eux;\",\"apt-get\",\"update;\",\"apt-get\",\"install\",\"-y\",\"--no-install-recommends\",\"git\",\"mercurial\",\"openssh-client\",\"subversion\",\"procps\",\";\",\"rm\",\"-rf\",\"/var/lib/apt/lists/*\"]",
+          "system_commands": [
+            "[\"RUN\",\"/bin/sh\",\"-c\",\"set\",\"-eux",
+            "\",\"apt-get\",\"update",
+            "\",\"apt-get\",\"install\",\"-y\",\"--no-install-recommends\",\"git\",\"mercurial\",\"openssh-client\",\"subversion\",\"procps\",\"",
+            "\",\"rm\",\"-rf\",\"/var/lib/apt/lists/*\"]"
+          ],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2025-02-04T18:23:13Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 258528408,
+          "size_human": "258 MB",
+          "command_snippet": "RUN [\"RUN\",\"/bin/sh\",\"-c\",\"set\",\"-eux;\",\"apt...",
+          "command_all": "RUN [\"RUN\",\"/bin/sh\",\"-c\",\"set\",\"-eux;\",\"apt-get\",\"update;\",\"apt-get\",\"install\",\"-y\",\"--no-install-recommends\",\"g++\",\"gcc\",\"libc6-dev\",\"make\",\"pkg-config\",\";\",\"rm\",\"-rf\",\"/var/lib/apt/lists/*\"]",
+          "system_commands": [
+            "[\"RUN\",\"/bin/sh\",\"-c\",\"set\",\"-eux",
+            "\",\"apt-get\",\"update",
+            "\",\"apt-get\",\"install\",\"-y\",\"--no-install-recommends\",\"g++\",\"gcc\",\"libc6-dev\",\"make\",\"pkg-config\",\"",
+            "\",\"rm\",\"-rf\",\"/var/lib/apt/lists/*\"]"
+          ],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2025-02-04T18:23:13Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN [\"ENV\",\"GOLANG_VERSION=1.22.12\"]",
+          "command_all": "RUN [\"ENV\",\"GOLANG_VERSION=1.22.12\"]",
+          "system_commands": [
+            "[\"ENV\",\"GOLANG_VERSION=1.22.12\"]"
+          ],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2025-02-04T18:23:13Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN [\"ENV\",\"GOTOOLCHAIN=local\"]",
+          "command_all": "RUN [\"ENV\",\"GOTOOLCHAIN=local\"]",
+          "system_commands": [
+            "[\"ENV\",\"GOTOOLCHAIN=local\"]"
+          ],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2025-02-04T18:23:13Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN [\"ENV\",\"GOPATH=/go\"]",
+          "command_all": "RUN [\"ENV\",\"GOPATH=/go\"]",
+          "system_commands": [
+            "[\"ENV\",\"GOPATH=/go\"]"
+          ],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2025-02-04T18:23:13Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN [\"ENV\",\"PATH=/go/bin:/usr/local/go/bin:/...",
+          "command_all": "RUN [\"ENV\",\"PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"]",
+          "system_commands": [
+            "[\"ENV\",\"PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"]"
+          ],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2025-02-04T18:23:13Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 222341409,
+          "size_human": "222 MB",
+          "command_snippet": "RUN [\"COPY\",\"/target/\",\"/\"]",
+          "command_all": "RUN [\"COPY\",\"/target/\",\"/\"]",
+          "system_commands": [
+            "[\"COPY\",\"/target/\",\"/\"]"
+          ],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2025-02-04T18:23:13Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN [\"RUN\",\"/bin/sh\",\"-c\",\"mkdir\",\"-p\",\"$GOP...",
+          "command_all": "RUN [\"RUN\",\"/bin/sh\",\"-c\",\"mkdir\",\"-p\",\"$GOPATH/src\",\"$GOPATH/bin\",\"&&\",\"chmod\",\"-R\",\"1777\",\"$GOPATH\"]",
+          "system_commands": [
+            "[\"RUN\",\"/bin/sh\",\"-c\",\"mkdir\",\"-p\",\"$GOPATH/src\",\"$GOPATH/bin\",\"",
+            "\",\"chmod\",\"-R\",\"1777\",\"$GOPATH\"]"
+          ],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2025-02-04T18:23:13Z",
+          "is_last_instruction": true,
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN [\"WORKDIR\",\"/go\"]",
+          "command_all": "RUN [\"WORKDIR\",\"/go\"]",
+          "system_commands": [
+            "[\"WORKDIR\",\"/go\"]"
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "raw_tags": [
+            "golang:1.22"
+          ]
+        }
+      ]
+    },
+    {
+      "is_top_image": true,
+      "id": "sha256:f6b797815fdabc42b516ab819ae7416fd8e04e7569eed1ce19fcf7590ed403e3",
+      "full_name": "reserva-salas:latest",
+      "repo_name": "reserva-salas",
+      "version_tag": "latest",
+      "raw_tags": [
+        "reserva-salas:latest"
+      ],
+      "create_time": "2025-03-31T18:03:42Z",
+      "new_size": 88145249,
+      "new_size_human": "88 MB",
+      "base_image_id": "sha256:2fce09cfad57c6de112654eeb6f6da1851f3ced1cff7ac0002378642c2c7ca84",
+      "instructions": [
+        {
+          "type": "WORKDIR",
+          "time": "2025-03-31T17:43:03Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:5c34b29b0955ea60bda4dd34055453bf848f756a3b8fc55ada406b80d47636b7",
+          "layer_index": 0,
+          "size": 0,
+          "params": "/app",
+          "command_snippet": "WORKDIR /app",
+          "command_all": "WORKDIR /app",
+          "system_commands": [
+            "mkdir -p /app"
+          ]
+        },
+        {
+          "type": "COPY",
+          "time": "2025-03-31T18:03:11Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:f6d77ef498817c4c101b87ed680b457f46083a092c3ba64626800c96f245b2b1",
+          "layer_index": 0,
+          "size": 4358671,
+          "size_human": "4.4 MB",
+          "params": "dir:728ffc2930380a70b66823cb31ae4c7ad72e095b0e4eac5d466a01ba9c1331a8 in /app",
+          "command_snippet": "COPY dir:728ffc2930380a70b66823cb31ae4c7ad72...",
+          "command_all": "COPY dir:728ffc2930380a70b66823cb31ae4c7ad72e095b0e4eac5d466a01ba9c1331a8 /app",
+          "target": "/app",
+          "source_type": "dir"
+        },
+        {
+          "type": "RUN",
+          "time": "2025-03-31T18:03:12Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:b41b2dbca42fce37b612ad781036a7508427bf07a0aaaeb3713f03406a8ef5e1",
+          "layer_index": 0,
+          "size": 36,
+          "size_human": "36 B",
+          "command_snippet": "RUN go mod init example.com/m/v2",
+          "command_all": "RUN go mod init example.com/m/v2",
+          "system_commands": [
+            "go mod init example.com/m/v2"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2025-03-31T18:03:42Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:15e00ce21c51ff3d0d48aa7479c9a660b7b7a5a8d9fef13124a324cf4dd0227f",
+          "layer_index": 0,
+          "size": 83786542,
+          "size_human": "84 MB",
+          "command_snippet": "RUN go build -o reserva-salas",
+          "command_all": "RUN go build -o reserva-salas",
+          "system_commands": [
+            "go build -o reserva-salas"
+          ]
+        },
+        {
+          "type": "CMD",
+          "time": "2025-03-31T18:03:42Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"./reserva-salas\"]\n",
+          "command_snippet": "CMD [\"./reserva-salas\"]\n",
+          "command_all": "CMD [\"./reserva-salas\"]\n",
+          "raw_tags": [
+            "reserva-salas:latest"
+          ]
+        }
+      ]
+    }
+  ]
+}
