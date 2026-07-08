@@ -7,7 +7,7 @@ services:
     image: reserva-salas
     container_name: reserva-salas
     ports:
-      - 8080:8080
+      - 8099:8080
     volumes:
       - ./dados:/app/dados
     networks:
